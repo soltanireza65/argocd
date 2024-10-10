@@ -12,6 +12,10 @@ spec:
     chart: stable/redis
     repoURL: https://charts.bitnami.com/bitnami
     targetRevision: 18.9.1
+    helm:
+      values: |
+        replica:
+          replicaCount: 4
   syncPolicy:
     automated:
       prune: true
