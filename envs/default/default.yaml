@@ -1,0 +1,14 @@
+apiVersion: argocd.io/v1alpha1
+kind: Application
+metadata:
+  name: default
+  namespace: argocd
+spec:
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    directory:
+      recurse: true
+    path: envs/default
